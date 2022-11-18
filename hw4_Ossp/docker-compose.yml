@@ -1,7 +1,22 @@
-version: "3.0"
+version: '3.0'
 
 services:
-  ossp-hw5-app:
-    build: .
-    ports: 
-      - "80:80"
+    hw5-app:
+
+      build: .
+
+      image: ${DOCKER_USER_ID}/ossprac
+
+    production:
+
+      image: ${DOCKER_USER_ID}/ossprac:${BUILD_NUMBER}
+
+      volumes:
+
+        - .:/code
+
+      command: hw4_ossp-hw5-app main.py
+
+      ports:
+
+        - '80:80'
