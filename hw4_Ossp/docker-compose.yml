@@ -15,7 +15,7 @@ services:
 
         - .: /code
 
-      command: hw4_ossp-hw5-app main.py
+      command: tiangolo/uwsgi-nginx-flask pmain.py
 
       ports:
 
