@@ -13,7 +13,7 @@ services:
 
       volumes:
 
-        - .:/code
+        - .: /code
 
       command: hw4_ossp-hw5-app main.py
 
