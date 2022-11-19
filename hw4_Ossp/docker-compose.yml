@@ -13,7 +13,7 @@ services:
 
       volumes:
 
-        - .: /code
+        - ${WORKSPACE_PATH}/${JOB_NAME}:/app
 
       command: tiangolo/uwsgi-nginx-flask pmain.py
 
