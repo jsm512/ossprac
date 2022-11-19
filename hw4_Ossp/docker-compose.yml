@@ -7,15 +7,17 @@ services:
 
       image: ${DOCKER_USER_ID}/ossprac
 
+      volumes:
+
+        - ${WORKSPACE_PATH}/${JOB_NAME}:/app
+      
+      working_dir: /app
+
     production:
 
       image: ${DOCKER_USER_ID}/ossprac:${BUILD_NUMBER}
 
-      volumes:
-
-        - ${WORKSPACE_PATH}/${JOB_NAME}:/app
-
-      command: tiangolo/uwsgi-nginx-flask pmain.py
+      command: tiangolo/uwsgi-nginx-flask main.py
 
       ports:
 
