@@ -8,8 +8,8 @@ services:
       image: ${DOCKER_USER_ID}/ossprac
 
       volumes:
-
-        - ${WORKSPACE_PATH}/${JOB_NAME}:/app
+      - ~/jenkins:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
       
       working_dir: /app
 
