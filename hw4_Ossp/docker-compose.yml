@@ -1,7 +1,7 @@
 version: '3.0'
 
 services:
-    app:
+    hw6:
 
       build: .
 
