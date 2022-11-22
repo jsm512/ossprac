@@ -5,7 +5,7 @@ services:
 
       build: .
 
-      image: jsm512/ossprac:3.0
+      image: jenkins/jenkins
 
       volumes:
       - ~/jenkins:/var/jenkins_home
